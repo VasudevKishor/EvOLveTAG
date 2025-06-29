@@ -25,7 +25,7 @@ def register():
 
     return jsonify({'message': 'User registered successfully'}), 201
 
-@auth.route('/login', methods=['POST'])
+@auth_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
     email = data.get('email')
